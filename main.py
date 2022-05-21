@@ -51,10 +51,10 @@ try:
         if np.linalg.det(A) == 0 or np.linalg.det(F) == 0:
             print("Нельзя вычислить т.к. матрица A или F вырождена")
         elif np.linalg.det(A) > np.trace(F):
-            print("Вычисление выражения: A^-1*A^T-K*F^-1")
+            print("Вычисление выражения: A^-1*A^T – K * F")
             A = np.dot(np.linalg.inv(A), np.transpose(A)) - np.dot(F, K)        #A^-1*A^T – K * F
         else:
-            print("Вычисление выражения: (A^-1+G-F^-1)*K")
+            print("Вычисление выражения: (A^Т +G^-1-F^-1)*K")
             A = (np.transpose(A) + np.linalg.inv(G) - np.linalg.inv(F)) * K     #(A^Т +G^-1-F^-1)*K
         print("Результат:")
         for i in A:                                                             #Вывод результата
