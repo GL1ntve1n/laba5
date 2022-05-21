@@ -1,7 +1,7 @@
 import time
 import numpy as np
 try:
-    N = int(input("Введите количество строк (столбцов) квадратной матрицы больше 3 и меньше 184:"))
+    N = int(input("Введите количество строк и столбцов квадратной матрицы больше 3 и меньше 184:"))
     if (N >= 4) and (N <= 183):
         K = int(input("Введите число К:"))
         program = time.time()
@@ -63,8 +63,8 @@ try:
             print()
         finish = time.time()
         result = finish - program
-        print("Время программы: " + str(result) + " секунды.")
+        print("Время программы: " + str(result) + " секунды")
     else:
-        print("\nВы ввели неверное число.")
+        print("\nВы ввели неверное число")
 except ValueError:
     print("\nЭто не число")
